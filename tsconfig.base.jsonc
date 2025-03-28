@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
+
+    // JS interop
+    "allowJs": true,
+    "checkJs": true,
+
+    // stricter flags -- you may opt them out
+    "noUncheckedIndexedAccess": true,
+  },
+}

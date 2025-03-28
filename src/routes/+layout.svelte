@@ -1,0 +1,23 @@
+<script lang="ts">
+  import "../app.css";
+  import Header from "@/ui/parts/Header.svelte";
+  import { page } from "$app/state";
+
+  const { children } = $props();
+
+  // toast
+  import { ToastController } from "@/services/toast/controller.svelte.ts";
+  import Toast from "@/services/toast/provider.svelte";
+
+  const toast = new ToastController();
+</script>
+
+<svelte:head>
+  <meta property="og:site_name" content="SvelteKit project template" />
+  <meta property="og:url" content={page.url.toString()} />
+</svelte:head>
+
+<Header />
+<Toast {toast} />
+
+{@render children()}
