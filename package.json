@@ -1,0 +1,32 @@
+{
+  "name": "sveltekit-fullstack-template",
+  "type": "module",
+  "workspaces": [
+    "web",
+    "server",
+    "share"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.2.13",
+    "lefthook": "^1.11.12",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "wrangler": "^4.14.4",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "prepare": "bun sync",
+    "dev": "bun --filter=@stack/web dev",
+    "sync": "bun lefthook install && bun --filter=@stack/web sync",
+    "build": "bun run --filter=@stack/web build",
+    "preview": "bun --filter=@stack/web preview",
+    "check": "bun check:types && bun check:format",
+    "check:types": "bun tsc && bun --filter=@stack/web check",
+    "check:format": "bun biome check . && bun prettier . --check",
+    "fix": "bun format",
+    "format": "bun biome check . --fix --unsafe && bun prettier . --write",
+    "install:production": "bun i --frozen-lockfile --production --ignore-scripts"
+  }
+}

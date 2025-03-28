@@ -1,0 +1,14 @@
+{
+  "name": "@stack/server",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.2.13"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "hono": "^4.7.9"
+  }
+}
