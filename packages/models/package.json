@@ -1,0 +1,14 @@
+{
+  "name": "@packages/models",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./models.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "valibot": "^1.1.0"
+  }
+}
