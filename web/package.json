@@ -1,0 +1,34 @@
+{
+  "name": "@stack/web",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "preview2": "bun wrangler pages dev ./.svelte-kit/cloudflare",
+    "sync": "svelte-kit sync",
+    "check": "bun sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "type": "module",
+  "dependencies": {
+    "@iconify/svelte": "^5.0.0",
+    "@sveltejs/adapter-cloudflare": "^7.0.2",
+    "@sveltejs/kit": "^2.20.8",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.5",
+    "daisyui": "^5.0.35",
+    "hono": "^4.7.8",
+    "runed": "0.26.0",
+    "svelte": "^5.28.2",
+    "svelte-check": "^4.1.7",
+    "tailwindcss": "^4.1.5",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "@stack/server": "workspace:server",
+    "@stack/share": "workspace:share"
+  }
+}
