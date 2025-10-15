@@ -1,0 +1,17 @@
+node_modules
+local.db
+
+# build output
+.svelte-kit
+dist
+target
+
+# development environment / OS
+.env
+.direnv
+.DS_Store
+.wrangler
+
+# vite logs
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
